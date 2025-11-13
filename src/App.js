@@ -26,7 +26,7 @@ const [weather,setweather]=useState();
     <>
     <div className='container'>
 <div className='weather'> 
-  <center><a><i class="fa-solid fa-cloud-sun-rain" ></i></a></center>
+  <center><a><i class="fa-solid fa-cloud fa-4x"></i></a></center>
   <center><label ><h4>Weather Forcast</h4></label></center>
   
 <div>
@@ -41,13 +41,14 @@ const [weather,setweather]=useState();
 
   {weather &&(
     <div>
-      <center><a><i class="fa-solid fa-cloud-sun-rain" ></i></a></center>
+      <center><a><i class="fa-solid fa-cloud-sun-rain fa-4x" ></i></a></center>
       
       <h4>Weather in {weather.data.name}</h4>
       <br/>
-      <p>Temperature: {(weather.data.main.temp - 273.15).toFixed(2)} °C</p>
+      
+      <p>Temperature: {(weather.data.main.temp - 273.15).toFixed(2)} °C   <i class="fa-solid fa-temperature-three-quarters fa-2x" ></i></p>
       <br/>
-      <p>Humidity: {weather.data.main.humidity} %</p>
+      <p>Humidity: {weather.data.main.humidity} %   <i class="fa-regular fa-droplet "></i></p>
       <br/>
       <p>Condition: {weather.data.weather[0].description}</p>
       <br/><br/>
